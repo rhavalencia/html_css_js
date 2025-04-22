@@ -1,15 +1,15 @@
-const ratingEls = document.querySelectorAll(".rating");
-const btnEl = document.getElementById("btn");
+const ratingElements = document.querySelectorAll(".rating");
+const btnElement = document.getElementById("btn");
 
-const containerEl = document.getElementById("container");
+const containerElement = document.getElementById("container");
 
 let selectedRating = "";
 
-ratingEls.forEach((ratingEl) => {
-  ratingEl.addEventListener("click", (event) => {
+ratingEls.forEach((ratingElements) => {
+  ratingElements.addEventListener("click", (event) => {
     removeActive();
     selectedRating =
-      event.target.innerText || event.target.parentNode.innerText;
+    event.target.innerText || event.target.parentNode.innerText;
     event.target.classList.add("active");
     event.target.parentNode.classList.add("active");
   });
