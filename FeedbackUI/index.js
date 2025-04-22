@@ -5,8 +5,8 @@ const containerElement = document.getElementById("container");
 
 let selectedRating = "";
 
-ratingEls.forEach((ratingElements) => {
-  ratingElements.addEventListener("click", (event) => {
+ratingElements.forEach((ratingElement) => {
+  ratingElement.addEventListener("click", (event) => {
     removeActive();
     selectedRating =
     event.target.innerText || event.target.parentNode.innerText;
@@ -15,9 +15,9 @@ ratingEls.forEach((ratingElements) => {
   });
 });
 
-btnEl.addEventListener("click", () => {
+btnElement.addEventListener("click", () => {
   if (selectedRating !== "") {
-    containerEl.innerHTML = `
+    containerElement.innerHTML = `
         <strong>Thank you!</strong>
         <br>
         <br>
@@ -28,7 +28,7 @@ btnEl.addEventListener("click", () => {
 });
 
 function removeActive() {
-  ratingEls.forEach((ratingEl) => {
-    ratingEl.classList.remove("active");
+  ratingElements.forEach((ratingElement) => {
+    ratingElement.classList.remove("active");
   });
 }
